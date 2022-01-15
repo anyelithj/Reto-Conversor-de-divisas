@@ -12,17 +12,23 @@
         <div class="sub-content">
             <img src="img/money.jpg" alt="imagen de convertidor">
             <form action="" class="form" id="form">
-                <input type="text" id="entr" class="input" placeholder="cantidad de Dinero">
-                <select name="moneda" class="money" id="optionOne">
-                </select>
-                <select name="moneda" class="money" id="optionTwo">
-                </select>
+                <div class="form__item--input">
+                    <input type="text" id="input" class="input" placeholder="cantidad de Dinero">
+                </div>
+                <div class="form__item--select">
+                    <select name="moneda" class="select" id="optionOne">
+                    </select>
+                    <select name="moneda" class="select" id="optionTwo">
+                    </select>
+                </div>    
                 <button class="button" id="button">conventir</button>
-                <div id="result" class="result"></div>
+                <div id="result" class="result">
+                </div>
+               
             </form>
         </div>
     </div>
     <script src="js/app.js"></script>
-    <!-- <script src="js/app copy.js"></script> -->
+ 
 </body>
 </html>

@@ -1,7 +1,7 @@
 let moneys = ['Elige tu Moneda', 'Dolar', 'Peso Mexicano', 'Peso Colombiano', 'Euro', 'Libra Esterlina'];
 let result = 0;
 let resultOne = 0;
-let entr = document.querySelector('.input');
+let entr = document.querySelector('#input');
 let button = document.getElementById('button');
 let moneysSelectOne = document.querySelector('#optionOne');
 let moneysSelectTwo = document.querySelector('#optionTwo');
@@ -80,7 +80,7 @@ function calculator(e) {
         }
         result = document.createElement('p');
         result.value = resultOne;
-        result.textContent = resultOne.toFixed(2);
+        result.textContent = `El resultado de la conversión es : ${resultOne.toFixed(2)}`;
         console.log(resultOne);
         resultSelect.appendChild(result);
         
@@ -88,16 +88,7 @@ function calculator(e) {
             document.querySelector('p').style.display = 'none';
         }  
 
-   form.reset()
+   form.reset();
+   setTimeout( () => resultSelect.remove(), 2000);
    } 
-}  
-limpiarHTML();
-function limpiarHTML() {
-    while(result.firstChild) {
-        result.removeChild(result.firstChild);
-    }
-  }
-
- 
-  
-  
+} 
